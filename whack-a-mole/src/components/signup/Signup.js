@@ -18,7 +18,10 @@ function Signup() {
       ...userObj,
       score: 0,
     };
-    let res = await axios.post("http://localhost:4001/user-api/user", userObj);
+    let res = await axios.post(
+      "https://whackamole-1.onrender.com/user-api/user",
+      userObj
+    );
     if (
       res.data.message === "User created" &&
       userObj.password === userObj.cpassword
@@ -46,7 +49,7 @@ function Signup() {
               <div className="mb-4">
                 <input
                   type="text"
-                  style={{ backgroundColor: "transparent",color:"white" }}
+                  style={{ backgroundColor: "transparent", color: "white" }}
                   placeholder="Username"
                   className="form-control"
                   id="username"
@@ -73,7 +76,7 @@ function Signup() {
               <div className="mb-4">
                 <input
                   type="password"
-                  style={{ backgroundColor: "transparent",color:"white" }}
+                  style={{ backgroundColor: "transparent", color: "white" }}
                   placeholder="Password"
                   className="form-control"
                   id="password"
@@ -101,7 +104,7 @@ function Signup() {
               <div className="mb-4">
                 <input
                   type="password"
-                  style={{ backgroundColor: "transparent",color:"white" }}
+                  style={{ backgroundColor: "transparent", color: "white" }}
                   placeholder="Confirm Password"
                   className="form-control"
                   id="password"

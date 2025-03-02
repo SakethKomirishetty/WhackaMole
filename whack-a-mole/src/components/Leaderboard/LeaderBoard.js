@@ -13,7 +13,7 @@ function LeaderBoard() {
     async function getLeaderBoard() {
       try {
         const res = await axios.get(
-          "http://localhost:4001/user-api/get-leaderboard"
+          "https://whackamole-1.onrender.com/user-api/get-leaderboard"
         );
         setUsers(res.data.payload);
       } catch (error) {

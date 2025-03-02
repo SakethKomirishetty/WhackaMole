@@ -34,7 +34,7 @@ function SinglePlayer() {
           };
 
           await axios.post(
-            "http://localhost:4001/user-api/update-score",
+            "https://whackamole-1.onrender.com/user-api/update-score",
             userObj
           );
         } catch (error) {

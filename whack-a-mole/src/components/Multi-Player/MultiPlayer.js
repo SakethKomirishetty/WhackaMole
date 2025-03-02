@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 import io from "socket.io-client";
 import axios from "axios";
 
-const socket = io("http://localhost:4001");
+const socket = io("https://whackamole-1.onrender.com");
 
 function Multiplayer() {
   let navigate = useNavigate();
@@ -32,7 +32,7 @@ function Multiplayer() {
             score: score,
           };
           await axios.post(
-            "http://localhost:4001/user-api/update-score",
+            "https://whackamole-1.onrender.com/user-api/update-score",
             userObj
           );
         } catch (error) {

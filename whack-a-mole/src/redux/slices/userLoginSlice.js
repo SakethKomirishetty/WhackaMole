@@ -7,7 +7,7 @@ export const userLoginThunk = createAsyncThunk(
   async (userCred, thunkApi) => {
     try {
       const res = await axios.post(
-        "http://localhost:4001/user-api/login",
+        "https://whackamole-1.onrender.com/user-api/login",
         userCred
       );
 
